@@ -1,3 +1,38 @@
-$couleur-primaire: #9356DC;
-$couleur-secondaire : #FF79DA;
-$couleur-tertiaure : #99E2DO; 
+
+
+p{
+    font-family:'Roboto';
+}
+
+header
+{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    height: 30px;
+    object-fit: cover;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.localisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(233, 231, 231);
+}
+
+.fa-solid.fa-location-dot{
+        margin-right: 10px;
+    }    
+
+.logo{
+    width: auto;
+    
+}
+
+.img_restaurant
+{
+    width:50px;
+}
+
