@@ -1,7 +1,14 @@
-.card {
-  background-color: white;
-  width: 100px;
+.card__etapes__fonctionnement {
+  text-decoration: none;
+}
+.card__etapes__fonctionnement li {
+  background-color: rgb(247, 247, 247);
+  text-decoration: none;
+  width: 100%;
   box-shadow: 0px 0px 5px grey;
+  list-style: none;
+  height: 30px;
+  border-radius: 20px;
 }
 
 body {
@@ -9,6 +16,12 @@ body {
   padding: 20px;
   justify-content: center;
   display: flex;
+}
+
+.logo {
+  width: 5Opx;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .localisation {
@@ -22,11 +35,58 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.bloc__accueil .h1 {
-  margin: 0;
-  padding: 20px, 25px, 20px, 25px;
-  display: inline-block;
+.bloc__accueil h1 {
+  margin: 0px 20px 20px 20px;
+  font-size: 26px;
+  font-weight: 20px;
+}
+.bloc__accueil p {
+  margin: 0px 10px 20px 10px;
+  font-size: 22px;
+  font-weight: 200;
+}
+.bloc__accueil a {
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  width: auto;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  height: 50px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 20px rgb(116, 116, 116);
+}
+
+.bloc__fonctionnement {
+  padding-top: 30 px;
+  padding-bottom: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.bloc__fonctionnement h2 {
+  margin-left: 20px;
+  font-size: 26px;
+  font-weight: 20px;
+}
+.bloc__fonctionnement .etapes__fonctionnement {
+  text-decoration: none;
+}
+.bloc__fonctionnement .etapes__fonctionnement li {
+  background-color: rgb(247, 247, 247);
+  text-decoration: none;
+  width: 100%;
+  box-shadow: 0px 0px 5px grey;
+  list-style: none;
+  height: 30px;
+  border-radius: 20px;
 }
 
 header {
@@ -49,10 +109,6 @@ header {
 
 .fa-solid.fa-location-dot {
   margin-right: 10px;
-}
-
-.logo {
-  width: 80px;
 }
 
 .img_restaurant {

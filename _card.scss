@@ -1,5 +1,14 @@
-.card {
-    background-color: white;
-    width:100px;
-    box-shadow: 0px 0px 5px grey;
+.card__etapes__fonctionnement{
+    text-decoration: none;
+
+    li {
+        background-color:  rgb(247 247 247);
+        text-decoration: none;
+        width:100%;
+        box-shadow: 0px 0px 5px grey;
+        list-style: none;
+        height: 30px;
+        border-radius: 20px;
+      
+    }
 }
