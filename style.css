@@ -1,14 +1,21 @@
-.card__etapes__fonctionnement {
-  text-decoration: none;
-}
-.card__etapes__fonctionnement li {
-  background-color: rgb(247, 247, 247);
-  text-decoration: none;
-  width: 100%;
-  box-shadow: 0px 0px 5px grey;
-  list-style: none;
-  height: 30px;
+.card__restaurant {
+  height: 199px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  box-shadow: 4px 4px 5px rgb(164, 164, 164);
+}
+.card__restaurant a .img_restaurant {
+  height: 124px;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 body {
@@ -18,14 +25,25 @@ body {
   display: flex;
 }
 
+header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .logo {
-  width: 5Opx;
+  height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .localisation {
-  background-color: rgb(234, 234, 234);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 231, 231);
   height: 50px;
   margin: 0;
 }
@@ -41,7 +59,7 @@ body {
 .bloc__accueil h1 {
   margin: 0px 20px 20px 20px;
   font-size: 26px;
-  font-weight: 20px;
+  font-weight: 600;
 }
 .bloc__accueil p {
   margin: 0px 10px 20px 10px;
@@ -64,51 +82,55 @@ body {
   box-shadow: 4px 4px 20px rgb(116, 116, 116);
 }
 
+h2, h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
 .bloc__fonctionnement {
-  padding-top: 30 px;
-  padding-bottom: 30px;
+  padding: 30px 20px 30px 20px;
   background-color: white;
   display: flex;
   flex-direction: column;
 }
-.bloc__fonctionnement h2 {
-  margin-left: 20px;
-  font-size: 26px;
-  font-weight: 20px;
-}
 .bloc__fonctionnement .etapes__fonctionnement {
-  text-decoration: none;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 0px;
 }
-.bloc__fonctionnement .etapes__fonctionnement li {
+
+ol {
+  border: 2px black;
+}
+
+li {
   background-color: rgb(247, 247, 247);
-  text-decoration: none;
-  width: 100%;
   box-shadow: 0px 0px 5px grey;
-  list-style: none;
-  height: 30px;
-  border-radius: 20px;
+  height: 50px;
+  border-radius: 15px;
 }
-
-header {
+li a {
+  padding-left: 30px;
+  text-decoration: none;
+  height: 100%;
   display: flex;
-  width: 100%;
-  justify-content: center;
-  height: 30px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.localisation {
-  display: flex;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-  background-color: rgb(233, 231, 231);
+  border-radius: 15px;
+}
+li a:hover {
+  background-color: #f5edff;
 }
 
-.fa-solid.fa-location-dot {
-  margin-right: 10px;
+.picto {
+  margin-right: 20px;
+}
+
+.restaurants__a__la__carte {
+  background-color: #f7f7f7;
+  padding: 30px 20px 30px 20px;
 }
 
 .img_restaurant {
