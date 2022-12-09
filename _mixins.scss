@@ -4,3 +4,7 @@ align-items: center;
 justify-content: center;  
 }
 
+@mixin base-shadow {
+box-shadow: 4px 4px 5px rgb(164, 164, 164);
+}
+
