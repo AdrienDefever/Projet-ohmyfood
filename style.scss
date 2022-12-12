@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'card';
+@import 'restaurants';
 
 body {
     font-family: $fonts;
@@ -12,8 +13,7 @@ body {
 
 header
 {
-    display:flex;
-    justify-content:center;
+    @include flex-center();
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -42,7 +42,7 @@ h3,p{
     @include flex-center();
     background-color: rgb(233, 231, 231);
     height: 50px;
-    margin:0;
+    margin:0px;
 }
 
 .bloc__accueil {
@@ -96,9 +96,7 @@ h3,p{
                 border-radius: 15px;
                 padding-left: 30px;
                 padding-right: 30px;
-                display: flex;
-                text-align: center;
-                align-items: center;
+                @include flex-center();
                 height: 50px;
                 position: relative;
                 flex-grow: 1;
@@ -173,7 +171,9 @@ footer{
         font-family:'Shrikhand',sans-serif;
         font-size: 20px;
         margin: 10px 0px 20px 0px;
+        color: white;
     }
+    
     div{
         display:flex;
         flex-direction: column;

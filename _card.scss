@@ -26,12 +26,70 @@
             right:10px;
             top:50%;
             transform: translateY(-50%);
+            color: black;
+        }   
+        .fas{
+            opacity:0;
+        }
+        .fas:hover{
+        background-image: linear-gradient(to top, $primary-color, $secondary-color);
+        color: transparent;
+        background-clip: text;
+        opacity:1;
+        }
+    }
+}
+
+
+.choix{
+    background-color: white;
+    @include base-shadow();
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:70px;
+    margin: 15px 0px 15px 0px;
+    overflow: hidden;
+
+    &__plat{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 20px;
+        p {
+            margin:0px;
         }
     }
 
-.fas:hover{
-    background-image: linear-gradient(to top, $primary-color, $secondary-color);
-    color: transparent;
-    background-clip: text;
+    &__animation{
+        display: flex;
+        flex-direction: row;
+        p{
+            padding-right: 25px;
+            @include flex-center();
+        }
+
+        &__valide{
+        @include flex-center();
+        color: white;
+        background-color: $tertiary-color;
+        width:50px;
+        margin-right:-50px;
+        border-radius: 0px 20px 20px 0px;
+            i{
+            border-radius:50%;
+            background-color: white;
+            color: $tertiary-color;
+            padding:4px;
+         }
+    }
+    }  
 }
+
+.choix:hover{
+    .choix__animation__valide{
+        margin-right: 0px;
+        transition: 2s;
+    }
 }

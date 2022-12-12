@@ -1,0 +1,10 @@
+img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main__restaurant h2 {
+  font-family: "Shrikhand", sans-serif;
+}/*# sourceMappingURL=restaurants.css.map */
