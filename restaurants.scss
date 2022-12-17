@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 #bloc__page{
     min-width: 320px;
@@ -6,21 +7,19 @@
 
 header{
     position: relative;
+    i{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        font-weight: 900;
+        left:50px;
+        content:"\f177";
+        font-family: "Font Awesome 5 Free";
+        color: black;
+        font-size: 30px;
+        }
 }
 
-header {
-    i{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    font-weight: 900;
-    left:50px;
-    content:"\f177";
-    font-family: "Font Awesome 5 Free";
-    color: black;
-    font-size: 30px;
-    }
-}
 .main__restaurant{
     background-color:#F7F7F7;
     padding-bottom: 30px;
@@ -68,28 +67,28 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-}
-
-.entrees{  
-    width: 31.3%;
-    @media(max-width:768px){
-    width: 100%;
-}  
+    &__entrees{  
+        width: 31.3%;
+        @media(max-width:768px){
+        width: 100%;
+    }  
+    }
+    
+    &__plats{  
+        width: 31.3%;
+        @media(max-width:768px){
+        width: 100%;
+    }  
+    }
+    
+    &__desserts{  
+        width: 31.3%;
+        @media(max-width:768px){
+        width: 100%;
+    }  
+    }
 }
   
-.plats{  
-    width: 31.3%;
-    @media(max-width:768px){
-    width: 100%;
-}  
-}
-
-.desserts{  
-    width: 31.3%;
-    @media(max-width:768px){
-    width: 100%;
-}  
-}
 
 .repas{
     margin-top: 0px;
@@ -101,7 +100,6 @@ img {
 }
 
 button{
-   
     background-image: linear-gradient(to top, $primary-color, $secondary-color);
     border:none;
     color: white;

@@ -249,7 +249,6 @@ table {
 header {
   position: relative;
 }
-
 header i {
   position: absolute;
   top: 50%;
@@ -312,30 +311,27 @@ img {
   justify-content: space-between;
   gap: 20px;
 }
-
-.entrees {
+.menu__entrees {
   width: 31.3%;
 }
 @media (max-width: 768px) {
-  .entrees {
+  .menu__entrees {
     width: 100%;
   }
 }
-
-.plats {
+.menu__plats {
   width: 31.3%;
 }
 @media (max-width: 768px) {
-  .plats {
+  .menu__plats {
     width: 100%;
   }
 }
-
-.desserts {
+.menu__desserts {
   width: 31.3%;
 }
 @media (max-width: 768px) {
-  .desserts {
+  .menu__desserts {
     width: 100%;
   }
 }

@@ -140,7 +140,7 @@
 
 $num-choix: 10;
 $anim-dur: 3s;
-$anim-delay: $anim-dur / $num-choix;
+$anim-delay: calc($anim-dur / $num-choix); 
 
 .choix {
     animation: choix $anim-dur both;
