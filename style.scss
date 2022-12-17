@@ -42,7 +42,7 @@ h3,p{
     @include flex-center();
     background-color: rgb(233, 231, 231);
     height: 50px;
-    margin:0px;
+    margin:0;
 }
 
 .bloc__accueil {
@@ -70,9 +70,13 @@ h3,p{
         padding-right:15px;
         @include flex-center();
         @include base-shadow();
+        transform: scale(1);
+        transition: transform 400ms;
+        &:hover {
+        transform: scale(1.15);
     }
 }
-
+}
 .bloc__fonctionnement{
         padding : $spacing-bloc;
         background-color: white;
