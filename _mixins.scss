@@ -8,3 +8,10 @@ justify-content: center;
 box-shadow: 4px 4px 5px rgb(164, 164, 164);
 }
 
+@mixin animation-button{
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover {
+        transform: scale(1.15);
+}
+}

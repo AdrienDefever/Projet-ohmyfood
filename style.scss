@@ -4,6 +4,7 @@
 @import 'mixins';
 @import 'card';
 @import 'restaurants';
+@import 'animations';
 
 body {
     font-family: $fonts;
@@ -70,13 +71,10 @@ h3,p{
         padding-right:15px;
         @include flex-center();
         @include base-shadow();
-        transform: scale(1);
-        transition: transform 400ms;
-        &:hover {
-        transform: scale(1.15);
+        @include animation-button();
     }
 }
-}
+
 .bloc__fonctionnement{
         padding : $spacing-bloc;
         background-color: white;

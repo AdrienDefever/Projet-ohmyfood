@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'variables';
 
 #bloc__page{
     min-width: 320px;
@@ -13,7 +14,6 @@ header{
         transform: translateY(-50%);
         font-weight: 900;
         left:50px;
-        content:"\f177";
         font-family: "Font Awesome 5 Free";
         color: black;
         font-size: 30px;
@@ -112,9 +112,5 @@ button{
     @include base-shadow();
     cursor: pointer;
     font-size: 16px;
-    transform: scale(1);
-    transition: transform 400ms;
-    &:hover {
-        transform: scale(1.15);
-}
+    @include animation-button();
 }
