@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -39,6 +40,9 @@ table {
   border-spacing: 0;
 }
 
+.card {
+  flex-grow: 1;
+}
 .card__image {
   border-radius: 20px 20px 0px 0px;
   height: 150px;
@@ -87,53 +91,49 @@ table {
   justify-content: space-between;
   margin: 15px 0px 15px 0px;
   overflow: hidden;
-  height: 70px;
   cursor: pointer;
-}
-@media (max-width: 1200px) {
-  .choix {
-    height: 80px;
-  }
-}
-@media (max-width: 1000px) {
-  .choix {
-    height: 110px;
-  }
-}
-@media (max-width: 768px) {
-  .choix {
-    width: 100%;
-    height: 70px;
-  }
 }
 .choix__plat {
   display: flex;
-  justify-content: center;
   height: 100%;
   flex-direction: column;
   padding-left: 20px;
+  overflow: hidden;
+  flex-grow: 1;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .choix__plat h4 {
   font-size: 17px;
   font-weight: 500;
   margin: 0px;
   padding-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .choix__plat p {
   font-size: 15px;
   font-weight: 300;
   margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .choix__animation {
   display: flex;
   flex-direction: row;
 }
 .choix__animation p {
-  padding-right: 25px;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  bottom: 0;
   font-weight: bold;
+  margin: 0;
+  width: 45px;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .choix__animation__valide {
   display: flex;
@@ -141,8 +141,8 @@ table {
   justify-content: center;
   color: white;
   background-color: #99E2D0;
-  width: 50px;
-  margin-right: -50px;
+  width: 45px;
+  margin-right: -45px;
   border-radius: 0px 20px 20px 0px;
 }
 .choix__animation__valide i {
@@ -180,70 +180,8 @@ table {
           animation-duration: 1s;
 }
 
-@-webkit-keyframes choix {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes choix {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.choix {
-  -webkit-animation: choix 3s both;
-          animation: choix 3s both;
-}
-.choix--1 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-.choix--2 {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.choix--3 {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-.choix--4 {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-.choix--5 {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-.choix--6 {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-.choix--7 {
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
-}
-.choix--8 {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
-}
-.choix--9 {
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
-}
-.choix--10 {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
 #bloc__page {
-  min-width: 320px;
+  min-width: 280px;
 }
 
 header {
@@ -255,7 +193,6 @@ header i {
   transform: translateY(-50%);
   font-weight: 900;
   left: 50px;
-  content: "\f177";
   font-family: "Font Awesome 5 Free";
   color: black;
   font-size: 30px;
@@ -367,6 +304,154 @@ button:hover {
   transform: scale(1.15);
 }
 
+/* animation affichage successif d'une liste déroulante */
+@-webkit-keyframes choix {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes choix {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.choix {
+  -webkit-animation: choix 3s both;
+          animation: choix 3s both;
+}
+.choix--1 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.choix--2 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.choix--3 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.choix--4 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.choix--5 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.choix--6 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.choix--7 {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.choix--8 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.choix--9 {
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.choix--10 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+/* animation loading spinner démarrage du site */
+.loading__spinner {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: transparent;
+  -webkit-animation: change 4s forwards linear;
+          animation: change 4s forwards linear;
+}
+.loading__spinner::after {
+  content: "LOADING";
+  letter-spacing: 15px;
+  font-size: 70px;
+  height: 430px;
+  width: 430px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 3px #99E2D0;
+  background-image: linear-gradient(#FF79DA, #99E2D0);
+}
+
+@-webkit-keyframes change {
+  0% {
+    color: green;
+    opacity: 0.9;
+  }
+  25% {
+    color: blue;
+    opacity: 0.9;
+    transform: scale(1.2) rotate(360deg);
+  }
+  50% {
+    color: red;
+    opacity: 0.9;
+    transform: scale(1) rotate(360deg);
+  }
+  75% {
+    color: rgb(255, 0, 230);
+    opacity: 0.9;
+    transform: scale(1.5) rotate(720deg);
+  }
+  90% {
+    color: gold;
+    transform: rotate(1080deg) initial;
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes change {
+  0% {
+    color: green;
+    opacity: 0.9;
+  }
+  25% {
+    color: blue;
+    opacity: 0.9;
+    transform: scale(1.2) rotate(360deg);
+  }
+  50% {
+    color: red;
+    opacity: 0.9;
+    transform: scale(1) rotate(360deg);
+  }
+  75% {
+    color: rgb(255, 0, 230);
+    opacity: 0.9;
+    transform: scale(1.5) rotate(720deg);
+  }
+  90% {
+    color: gold;
+    transform: rotate(1080deg) initial;
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -501,20 +586,26 @@ h3, p {
   padding: 30px 20px 30px 20px;
 }
 #restaurants .restaurants__cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-}
-@media (max-width: 882px) {
-  #restaurants .restaurants__cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 #restaurants .restaurants__cards a {
   text-decoration: none;
   border-radius: 20px;
   background-color: #FFFFFF;
   box-shadow: 4px 4px 5px rgb(164, 164, 164);
+  width: 23%;
+}
+@media (max-width: 992px) {
+  #restaurants .restaurants__cards a {
+    width: 48%;
+  }
+}
+@media (max-width: 768px) {
+  #restaurants .restaurants__cards a {
+    width: 100%;
+  }
 }
 #restaurants .restaurants__cards .new {
   position: relative;

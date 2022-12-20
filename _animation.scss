@@ -21,3 +21,58 @@ $anim-delay: calc($anim-dur / $num-choix);
             }
         }
     }
+    
+/* animation loading spinner démarrage du site */
+
+.loading__spinner{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    @include flex-center();
+    z-index: 1;
+    background-color:transparent;
+    animation: change 4s forwards linear;
+    &::after{
+        content:"LOADING";
+        letter-spacing: 15px;
+        font-size: 70px;
+        height: 430px;
+        width: 430px;
+        border-radius: 50%;
+        @include flex-center();
+        border: solid 3px $tertiary-color;
+        background-image:linear-gradient($secondary-color,$tertiary-color); 
+    }
+}
+
+@keyframes change {
+    0%{
+            color: green;
+            opacity: 0.9;
+        }
+    
+    25%{
+        color: blue;
+        opacity: 0.9;
+        transform: scale(1.2) rotate(360deg);
+        }
+    50%{
+        color: red;
+        opacity: 0.9;
+        transform: scale(1) rotate(360deg);    
+    }
+    75%{color: rgb(255, 0, 230);
+        opacity: 0.9;
+        transform: scale(1.5) rotate(720deg); 
+        } 
+    90%{
+        color: gold;
+        transform :rotate(1080deg) initial;
+        opacity: 0.9;
+        }
+    100%{
+        transform: scale(0);   
+     }
+}
+
+   

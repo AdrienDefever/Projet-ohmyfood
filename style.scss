@@ -4,7 +4,7 @@
 @import 'mixins';
 @import 'card';
 @import 'restaurants';
-@import 'animations';
+@import 'animation';
 
 body {
     font-family: $fonts;
@@ -132,18 +132,24 @@ h3,p{
     padding : $spacing-bloc;
 
     .restaurants__cards{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         gap:20px;
-        @media(max-width: 882px){
-        grid-template-columns: repeat(1, 1fr);
-        }
+        
         a{ 
             text-decoration: none;
             border-radius: 20px;
             background-color: #FFFFFF;
             @include base-shadow();
+            width: 23%;
+            @media(max-width:992px){
+                width: 48%;
+            }
+            @media(max-width:768px){
+                width: 100%;
+            }
         }
+
         .new{
             position: relative;
         }

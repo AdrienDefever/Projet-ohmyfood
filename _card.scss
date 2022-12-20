@@ -1,4 +1,6 @@
 .card{
+    flex-grow: 1;
+
     &__image{
         border-radius: 20px 20px 0px 0px;
         height: 150px;
@@ -50,36 +52,35 @@
     justify-content: space-between;
     margin: 15px 0px 15px 0px;
     overflow: hidden;
-    height: 70px;
     cursor: pointer;
-    @media(max-width:1200px){
-        height: 80px;
-    }  
-    @media(max-width:1000px){
-        height: 110px;
-    }  
-    @media(max-width:768px){
-        width: 100%;
-        height: 70px;
-    }  
+   
 
     &__plat{
         display: flex;
-        justify-content: center;
         height: 100%;
         flex-direction: column;
         padding-left: 20px;
+        overflow: hidden;
+        flex-grow: 1;
+        padding-top: 25px;
+        padding-bottom: 25px;
         
         h4{
             font-size: 17px;
             font-weight: 500;
             margin:0px;
             padding-bottom: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;    
         }
         p{
             font-size: 15px;
             font-weight: 300;
             margin:0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;    
         }
     }
 
@@ -87,17 +88,23 @@
         display: flex;
         flex-direction: row;
         p{
-            padding-right: 25px;
-            @include flex-center();
+            justify-content: center;
+            bottom: 0;
             font-weight: bold;
+            margin:0;
+            width:45px;
+            display: flex;
+            align-items: flex-end;
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
 
         &__valide{
         @include flex-center();
         color: white;
         background-color: $tertiary-color;
-        width:50px;
-        margin-right:-50px;
+        width:45px;
+        margin-right:-45px;
         border-radius: 0px 20px 20px 0px;
             i{
             border-radius:50%;
@@ -126,6 +133,7 @@
             animation-name : rotation;
             animation-duration: 1s;
         }
+   
     }
 }
 
