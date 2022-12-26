@@ -32,12 +32,13 @@
         }   
         .fas{
             opacity:0;
+            transition: 1s;
         }
         .fas:hover{
         background-image: linear-gradient(to top, $primary-color, $secondary-color);
         color: transparent;
         background-clip: text;
-        opacity:1;
+        opacity: 1;
         }
     }
 }

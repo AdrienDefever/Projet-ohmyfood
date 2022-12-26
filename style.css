@@ -73,6 +73,7 @@ table {
 }
 .card__description .fas {
   opacity: 0;
+  transition: 1s;
 }
 .card__description .fas:hover {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
@@ -231,6 +232,7 @@ img {
 }
 .nom .fas {
   opacity: 0;
+  transition: 1s;
 }
 .nom .fas:hover {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
