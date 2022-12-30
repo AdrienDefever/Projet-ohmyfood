@@ -121,4 +121,5 @@ button {
 }
 button:hover {
   transform: scale(1.15);
+  opacity: 0.8;
 }/*# sourceMappingURL=restaurants.css.map */

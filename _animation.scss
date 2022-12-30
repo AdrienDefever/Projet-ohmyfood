@@ -29,9 +29,8 @@ $anim-delay: calc($anim-dur / $num-choix);
     width: 100%;
     position: fixed;
     @include flex-center();
-    z-index: 1;
-    background-color:transparent;
-    animation: change 4s forwards linear;
+    z-index: 10;
+    animation: change $anim-dur linear forwards;
     &::after{
         content:"LOADING";
         letter-spacing: 15px;
@@ -39,9 +38,10 @@ $anim-delay: calc($anim-dur / $num-choix);
         height: 430px;
         width: 430px;
         border-radius: 50%;
+        opacity: none;
         @include flex-center();
         border: solid 3px $tertiary-color;
-        background-image:linear-gradient($secondary-color,$tertiary-color); 
+        background-image:linear-gradient($secondary-color,$tertiary-color);  
     }
 }
 
@@ -71,8 +71,22 @@ $anim-delay: calc($anim-dur / $num-choix);
         opacity: 0.9;
         }
     100%{
-        transform: scale(0);   
+        transform: scale(0);
      }
 }
 
+body
+{
+    animation: background_color $anim-dur;
+    z-index: 1;
+}
+@keyframes background_color{
+    0%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 0.8;
+    }
+}
    
