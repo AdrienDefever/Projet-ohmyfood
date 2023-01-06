@@ -38,7 +38,6 @@ $anim-delay: calc($anim-dur / $num-choix);
         height: 430px;
         width: 430px;
         border-radius: 50%;
-        opacity: none;
         @include flex-center();
         border: solid 3px $tertiary-color;
         background-image:linear-gradient($secondary-color,$tertiary-color);  
@@ -67,11 +66,13 @@ $anim-delay: calc($anim-dur / $num-choix);
         } 
     90%{
         color: gold;
-        transform :rotate(1080deg) initial;
+        transform :rotate(1080deg);
+        transform:initial;
         opacity: 0.9;
         }
     100%{
         transform: scale(0);
+        opacity: 0;
      }
 }
 
