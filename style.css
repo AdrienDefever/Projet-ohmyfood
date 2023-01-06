@@ -372,12 +372,14 @@ button:hover {
 /* animation loading spinner démarrage du site */
 .loading__spinner {
   width: 100%;
+  max-width: 1440px;
+  margin: auto;
   height: 100%;
+  z-index: 10;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
   -webkit-animation: change 3s linear forwards;
           animation: change 3s linear forwards;
 }
@@ -485,6 +487,7 @@ body {
   font-family: "Roboto", sans-serif;
   width: 100%;
   max-width: 1440px;
+  margin: auto;
 }
 
 header {

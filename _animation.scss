@@ -26,10 +26,12 @@ $anim-delay: calc($anim-dur / $num-choix);
 
 .loading__spinner{
     width: 100%;
+    max-width: 1440px;
+    margin: auto;
     height: 100%;
+    z-index: 10;
     position: fixed;
     @include flex-center();
-    z-index: 10;
     animation: change $anim-dur linear forwards;
     &::after{
         content:"LOADING";
